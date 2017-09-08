@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BEER Searching</title>
+	<meta charset="utf-8">
+	<meta charset="iso-8859-1">
+	
+	<script src='build/main.bundle.js'></script>
+	<script src='js/getbeer.js'></script>
+	<style>
+		h1 {
+		color: white;
+    text-align: center;
+		}		
+
+		.input-group{
+			width: 800px;
+		}
+		body{
+			background-color:#87CEEB;
+			color: white;
+			font-size:20px;
+		}
+		</style>
+</head>
+<body>
+<center>
+	<h1>BEER Searching </h1>
+	<br>
+	<br>
+	<div class="input-group">
+		<span class="input">Name ex: Trashy Blonde</span>
+		<input type="text" class="form-control" id="name"><br>
+	</div><br>
+	<div class="input-group">
+		<span class="input" id="basic-addon3">Yeast ex: American ale</span>
+		<input type="text" class="form-control" id="yeast" >
+	</div>	
+	<button type="button" class="btn btn-outline-dark" onclick="findBeer((document.getElementById('name').value),(document.getElementById('yeast').value))">Search</button>
+	<h4> result: <span id="num"></span> </h4>
+	<div id="beers" >	</div>
+	</center>
+</body>
+</html>
